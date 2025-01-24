@@ -1,7 +1,6 @@
 .s-wrapper {
   display: flex;
   width: 385px;
-  height: 54px;
   align-items: center;
   padding: 0 15px;
   border-radius: 8px;
@@ -16,7 +15,7 @@
 
 .s-input {
   width: 100%;
-  height: 100%;
+  height: 70px;
   border: none;
   background-color: transparent;
   font-size: 14px;
@@ -25,4 +24,41 @@
 
 .s-input:focus {
   outline: none;
+}
+
+@media (max-width: 960px) {
+  .s-wrapper {
+    width: 100%;
+    min-height: 48px; // Ensure it fits the content with some extra space
+    padding: 0 10px;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .search-wrapper {
+    justify-content: center;
+  }
+  
+  .s-input {
+    font-size: 20px;
+  }
+}
+
+.header-wrapper .header .search-wrapper .search .search-bar {
+  position: unset !important;
+}
+
+body header.header-wrapper .header .mobile-nav .menu-drawer {
+  z-index: 1000;
+}
+
+.hamburger-wrapper {
+  z-index: 1001;
+}
+
+.search-button{
+  display: none;
+}
+
+#s-logo:hover{
+  background-color: transparent;
 }
